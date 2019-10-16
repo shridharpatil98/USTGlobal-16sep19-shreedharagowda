@@ -1,0 +1,12 @@
+<div class="col-md-4 offset-3 mt-5">
+    <div class="form-group">
+    <input type="search" class="form-control" name="searc" id="search" (input)=searchMovie($event)>
+</div>
+</div>
+<div *ngIf="movies">
+<div class="col-md-4 float-left card card-body" *ngFor="let m of movies">
+<h3>{{m.Title}}</h3>
+    <img src="{{m.Poster}}" alt="">
+<h3>{{m.Year}}</h3>
+</div>
+</div>

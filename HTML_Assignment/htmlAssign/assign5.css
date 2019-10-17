@@ -1,0 +1,136 @@
+.header{
+    background-color: #111;
+    text-align: center;
+    color: white;
+}
+li{
+    color: white;
+    font-size: 25px;
+}
+.card{
+    margin-left: 20px;
+}
+.logo{
+    height: 100px;
+    width: 120px;
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+.block2{
+    border: 1px solid white;
+    border-style: inset;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+.block2-head {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    
+}
+
+.form1{
+    width: 70%;
+    margin: 30px 15%;
+}
+.name{
+    width: 50%;
+    float: left;
+}
+.name input, .email input{
+    width: 95%;
+    height: 40px;
+}
+.email input {
+    margin-left: 5%;
+}
+.name input{
+    margin-right: 5%;
+}
+.email{
+    width: 50%;
+    float: left;
+}
+.subject, .message{
+    width: 100%;
+}
+.subject input{
+    width: 100%;
+    height: 40px;
+}
+.message input{
+    width: 100%;
+    height: 15em;
+    padding: 0;
+}
+#foot ul li {
+    display: inline-block;
+}
+
+#foot {
+    padding: 0;
+    background: #111;
+    width: 100%;
+    text-align: center;
+    padding-bottom: 3em;
+}
+
+#foot header h1{
+    color: #fff;
+    font-size: 2em;
+    letter-spacing: -0.015em;
+    font-weight: 700;
+    padding-top: 3em;
+}
+#foot header p {
+    font-size: 1.25em;
+    color: #888;
+    letter-spacing: 2px;
+    padding-top: 1em;
+}
+#foot div input {
+    border: none;
+    background: #282828;
+    padding: 0.75em;
+    font-size: 1em;
+    border-radius: 8px;
+    cursor: text;
+    margin-top: 25px;
+}
+#foot ul li {
+    display: inline-block;
+}
+
+.sub {
+    background: #43B3E0;
+    color:white;
+    padding: 20px;
+    font-size: 20px;
+    border-radius: 10px;
+    font-weight: 600;
+}
+.alt {
+    background: #282828;
+    color:white;
+    padding: 20px;
+    font-size: 20px;
+    border-radius: 10px;
+    font-weight: 600;
+    margin-left: 20px;
+}
+#foot .social ul li a .fa{
+    font-size: 30px;
+    padding: 10px;
+    width: 30px;
+    height: 30px;
+    background: #282828;
+    color: black;
+    margin-left: 5px;
+}
+.end {
+    padding-top: 30px;
+    color: #282828;
+}

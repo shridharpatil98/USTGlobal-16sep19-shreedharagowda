@@ -1,0 +1,9 @@
+
+public class TestF {
+public static void main(String[] args) {
+	Bmw b=new Bmw();
+	int g=b.gear();
+	b.gps();
+	System.out.println("gear= "+g);
+}
+}

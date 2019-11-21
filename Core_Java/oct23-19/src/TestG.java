@@ -1,0 +1,10 @@
+
+public class TestG implements A,B{
+	public void add() {
+		System.out.println("TestG");
+	}
+	public static void main(String[] args) {
+		A a = null;
+		a.add();
+	}
+}

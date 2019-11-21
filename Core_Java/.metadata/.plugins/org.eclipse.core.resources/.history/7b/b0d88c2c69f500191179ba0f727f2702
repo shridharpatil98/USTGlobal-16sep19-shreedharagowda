@@ -1,0 +1,6 @@
+
+public class Mi {
+void homeScreen() {
+	System.out.println("Mi HomeScreen");
+}
+}

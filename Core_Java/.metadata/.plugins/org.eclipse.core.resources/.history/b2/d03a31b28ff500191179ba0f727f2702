@@ -1,0 +1,10 @@
+
+public class Bmw implements AutoMobile {
+	public int gear() {
+		return 10;
+	}
+	public void gps() {
+		System.out.println("bmw ");
+	}
+
+}

@@ -1,0 +1,6 @@
+
+public class Son {
+void marry() {
+	System.out.println("Dimple");
+}
+}

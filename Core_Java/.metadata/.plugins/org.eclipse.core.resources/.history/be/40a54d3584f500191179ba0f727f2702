@@ -1,0 +1,8 @@
+
+public class TestB {
+	public static void main(String[] args) {
+		Dog d=new Dog();
+		
+
+	}
+}

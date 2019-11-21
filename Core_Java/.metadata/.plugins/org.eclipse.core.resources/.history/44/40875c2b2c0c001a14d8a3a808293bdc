@@ -1,0 +1,12 @@
+package com.ustglobal.assesment;
+
+public class Assesment {
+	public void combinationArray(int[] array) {
+		for(int i=0;i<array.length;i++) {
+			System.out.print(array[i]+96+","+array[i]);
+		}
+	}
+	public void () {
+		
+	}
+}

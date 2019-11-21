@@ -1,0 +1,6 @@
+
+public class Circle {
+	void shape() {
+		System.out.println("circle..");
+	}
+}

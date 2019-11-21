@@ -1,0 +1,6 @@
+
+public class Graphic {
+void move() {
+	System.out.println("moving...");
+}
+}

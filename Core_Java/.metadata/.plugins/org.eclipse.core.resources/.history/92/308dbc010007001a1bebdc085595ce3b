@@ -1,0 +1,24 @@
+package com.ustglobal.thread;
+
+class supsubclass extends subclass{
+	public static void main(String[] args) {
+		System.out.println("main 5");
+	}
+}
+class MainClasss {
+public static void main(String[] args) {
+	System.out.println("main1");
+	supsubclass a= new supsubclass();
+}
+public static void main(int[] args) {
+	System.out.println("main 2");
+}
+public static void main(char[] args) {
+	System.out.println("main 3");
+}
+}
+class subclass extends MainClass{
+	public static void main(String[] args) {
+		System.out.println("main 4");
+	}
+}

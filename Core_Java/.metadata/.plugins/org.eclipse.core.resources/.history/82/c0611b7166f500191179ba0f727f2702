@@ -1,0 +1,6 @@
+
+public class Son extends father{
+void marry() {
+	System.out.println("Dimple");
+}
+}

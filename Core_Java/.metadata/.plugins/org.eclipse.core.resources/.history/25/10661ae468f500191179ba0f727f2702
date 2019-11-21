@@ -1,0 +1,6 @@
+
+public class Sony {
+void homeScreen() {
+	System.out.println("Sony homeScreen");
+}
+}

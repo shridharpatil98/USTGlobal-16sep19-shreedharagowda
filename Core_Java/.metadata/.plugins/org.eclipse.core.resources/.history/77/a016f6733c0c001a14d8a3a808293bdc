@@ -1,0 +1,69 @@
+package com.ustglobal.assesment;
+
+public class Assesment {
+	public void combinationArray(int[] array) {
+		for(int i=0;i<array.length;i++) {
+			System.out.print(array[i]+96+","+array[i]);
+		}
+	}
+	public void mergeArray(int[] array1, int[] array2) {
+		int size=array1.length+array2.length;
+		int[] mergeArray=new int[size];
+		for(int i=0;i<size+1;i++)
+		{
+			mergeArray[i]=array1[i];
+			mergeArray[i+1]=array2[i];
+		}
+		for(int i=0;i<size;i++) {
+			System.out.print(mergeArray[i]);
+		}
+	}
+	public void numToArray(int num) {
+		int temp=num;
+		int i=0,count=0,j=0;
+		while(temp!=0) {
+			i=temp%10;
+			temp=temp/10;
+			count++;
+		}
+		int[] num2 = new int[count];
+		int[] newArray=new int[count];
+		while(num!=0) {
+			num2[i]=num%10;
+			num=num/10;
+			i++;
+		}
+		for(i=count;i>0;i--) {
+			newArray[j]=num2[i];
+			j++;
+		}
+		for(i=0;i<count;i++) {
+			System.out.print(newArray[i]);
+		}
+	}
+
+	public void pattern(int n) {
+		int size=n-1*n-1;
+		for(int i=0;i<size;i++) {
+			for (int j = 0; j < size; j++) {
+				if(i<=j) {
+					if(i%2!=0) {
+						System.out.print("*");
+					}
+				}else {
+					System.out.print("");
+				}
+			}
+			System.out.println();
+		}
+	}
+	public static void main(String[] args) {
+		Assesment as=new Assesment();
+		int[] array1= {1,3,5};
+		int[] array2= {2,4,6};
+//		as.mergeArray(array1, array2);
+		as.combinationArray(array1);
+		as.numToArray(1234);
+		as.pattern(5);
+	}
+}

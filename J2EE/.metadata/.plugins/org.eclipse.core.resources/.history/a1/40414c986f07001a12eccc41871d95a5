@@ -1,0 +1,7 @@
+package com.ustglobal.empwebapp.dao;
+
+public class EmployeeDAO {
+public EmployeeInfo auth(int id,String password) {
+	
+}
+}

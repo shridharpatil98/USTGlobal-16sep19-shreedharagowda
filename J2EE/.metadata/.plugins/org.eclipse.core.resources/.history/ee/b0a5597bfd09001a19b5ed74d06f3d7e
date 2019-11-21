@@ -1,0 +1,29 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+    <<jsp:useBean id="info" class="com.ustglobal.empwebapp.dto.EmployeeInfo" scope="request"></jsp:useBean>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<a href='./home.jsp'>Home<a>
+			<a href='./logout'>Logout<a>
+			<table align='center'>
+			<thead>Searched Element</thead>
+			<tr>
+			<th>ID</th>
+			<th>Name</th>
+			<th>Email</th>
+			</tr>
+			<% if(info!=null){%>
+			<tr>
+			<td><%=info.getId() %></td>
+			<td><%=info.getName() %></td>
+			<td><%=info.getEmail() %></td>
+			</tr>
+			<%} %>
+			</table>
+</body>
+</html>

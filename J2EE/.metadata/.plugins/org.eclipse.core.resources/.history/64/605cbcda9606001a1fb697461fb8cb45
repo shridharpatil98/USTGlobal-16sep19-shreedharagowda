@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<form action="./redirect">
+	
+		<table>
+			<tr>
+				<th>Search</th>
+				<td><input type="text" style="color:red" name="search"></td>
+			</tr>
+			<tr>
+			<input type="radio" name="engine" value="bing">
+			<input type="radio" name="engine" value="yahoo">
+			<input type="radio" name="engine" value="google">
+			
+			</tr>
+			<tr>
+				<td><input type="submit" name="submit"></td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>

@@ -1,0 +1,62 @@
+package com.ustglobal.empwebapp.servlet;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
+import com.ustglobal.empwebapp.dao.EmployeeDAO;
+import com.ustglobal.empwebapp.dto.EmployeeInfo;
+import com.ustglobal.empwebapp.util.EmployeeDaoManager;
+@WebServlet("/search")
+public class SearchServlet extends HttpServlet {
+	@Override
+	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		EmployeeInfo info=new EmployeeInfo();
+		EmployeeDAO dao=EmployeeDaoManager.getEmployeeDAO();
+		int id=Integer.parseInt(req.getParameter("q"));
+		PrintWriter out=resp.getWriter();
+		HttpSession session=req.getSession(false);
+		if(session==null) {
+			RequestDispatcher dispatch=req.getRequestDispatcher("/login.jsp");
+			dispatch.forward(req, resp);
+		}else {
+//			out.println("<html>");
+//			out.println("<body>");
+//			out.println("<a href='./home'>Home<a>");
+//			out.println("<a href='./logout'>Logout<a>");
+//
+//			out.println("<table align='center'>");
+//			out.println("<thead>Searched Element</thead>");
+//			out.println("<tr>");
+//			out.println("<th>ID</th>");
+//			out.println("<th>Name</th>");
+//			out.println("<th>Email</th>");
+//			out.println("</tr>");
+
+			info=(EmployeeInfo)dao.searchEmployee(id);
+			req.setAttribute("info", info);
+			RequestDispatcher dispatcher=req.getRequestDispatcher("/search.jsp");
+			dispatcher.forward(req, resp);
+			if(info!=null) {
+				out.println("<tr>");
+				out.println("<td>"+info.getId()+"</td>");
+				out.println("<td>"+info.getName()+"</td>");
+				out.println("<td>"+info.getEmail()+"</td>");
+				out.println("</tr>");
+			}else {
+				out.println("<html>");
+				out.println("Employee is not Exist");
+				RequestDispatcher dispatch=req.getRequestDispatcher("/search.html");
+				dispatch.include(req, resp);
+				out.println("</html>");
+			}
+		}
+	}
+}

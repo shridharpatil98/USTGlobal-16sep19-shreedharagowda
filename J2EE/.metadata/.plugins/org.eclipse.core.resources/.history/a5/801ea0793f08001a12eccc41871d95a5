@@ -1,0 +1,20 @@
+package com.ustglobal.empwebapp.servlet;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+public class LoinPageServlet extends HttpServlet {
+	@Override
+	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		PrintWriter out=resp.getWriter();
+		out.println("<form action='./login' method='post' style='width: 200px; height: 400px; margin-top: 100px; margin-left: 500px'>");
+		out.println("<h3 style='color: red'>Login Here</h3>");
+		out.println(" name :<input type='text' name='id' placeholder='Enter UserID'><br><br>");
+		out.println("");
+	}
+}

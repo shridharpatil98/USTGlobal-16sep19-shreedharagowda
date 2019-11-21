@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Login</title>
+</head>
+<body>
+	<form action="./login" method="post" style="width: 200px; height: 400px; margin-top: 100px; margin-left: 500px">
+		   <h3 style="color: red">Login Here</h3>
+		   name :<input type="text" name="id" placeholder="Enter UserID"><br><br>
+		password:<input type="password" name="password" placeholder="Enter Password"> <br>
+		<input style="margin-left: 50px" type="checkbox" value="checked" name="remember">Remember Me
+		<br> <input type="submit" name="submit" value="Login" style="color: blue;"><br>
+		<br> <a style="float: left" href="register.html">Register</a>
+	</form>
+</body>
+</html>

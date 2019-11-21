@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Login</title>
+</head>
+<body>
+	<form action="" style="width: 200px; height: 400px; background-color=green; margin-top: 100px; margin-left: 500px">
+		User ID:<input type="text" name="id" placeholder="Enter UserID"><br><br>
+		   User Name :<input type="text" name="name" placeholder="Enter UserID"><br><br>
+		   Email:<input type="email" name="email" placeholder="Enter Email"><br><br>
+		Uassword:<input type="password" name="password" placeholder="Enter Password"> <br>
+		
+		<br> <input type="submit" name="submit" value="Register" style="color: blue;"><br>
+		
+	</form>
+</body>
+</html>

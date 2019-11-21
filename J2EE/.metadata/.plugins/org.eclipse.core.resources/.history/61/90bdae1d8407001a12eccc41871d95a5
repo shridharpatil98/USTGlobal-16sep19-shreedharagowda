@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<form action=""
+		style="width: 500px; height: 400px; margin-top: 100px; margin-left: 200px">
+		name:<input type="text" name="id"> password:<input
+			type="password" name="password"> <input
+			style="margin-left: 50px" type="checkbox" name="remember">Remember
+		Me <input type="submit" name="submit"
+			style="color: blue; float: right"><br>
+		<br> <a href="register.html">Register</a>
+	</form>
+</body>
+</html>

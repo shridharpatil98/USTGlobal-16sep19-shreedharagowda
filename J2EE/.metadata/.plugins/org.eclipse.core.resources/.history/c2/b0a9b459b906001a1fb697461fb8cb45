@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<form action="./employee" method="post">
+	<h1>Search Employee Details</h1>
+		<input name="id" type="text">
+		<input type="submit" value="sumbit">
+	</form>
+</body>
+</html>

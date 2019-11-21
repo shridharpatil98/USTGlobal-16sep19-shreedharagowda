@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Register</title>
+</head>
+<body>
+	<form action="" style="width: 200px; height: 400px; background-color=yellow; margin-top: 100px; margin-left: 500px">
+		<span style="color: red;float: left"><a href="home.html">HOME</a></span><span style="color: red;float: right">Logout</span>
+		<input type="search" name="search" placeholder="Enter Employee ID to Search">
+		<br><br><br>
+		<input type="submit" value="Search" style="color: blue;float: right">
+	</form>
+</body>
+</html>
+</body>
+</html>

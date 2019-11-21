@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Update Password</title>
+</head>
+<body>
+<form action="" style="width: 200px; height: 400px; background-color=yellow; margin-top: 100px; margin-left: 500px">
+		<h1>Update Password Here</h1>
+		<span style="color: red;float: left"><a href="home.html">HOME</a></span><span style="color: red;float: right">Logout</span>
+		<br><br>
+		New Password:<input type="password" name="newpass" placeholder="Enter New Password"><br><br><br>
+		Confirm Password:<input type="password" name="confirm" placeholder="Confirm Password">
+		<br><br>
+		<input type="submit" value="Search" style="color: blue;float: right">
+	</form>
+</body>
+</html>

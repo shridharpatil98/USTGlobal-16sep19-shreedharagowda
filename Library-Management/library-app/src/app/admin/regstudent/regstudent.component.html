@@ -1,0 +1,63 @@
+<h3 class="col-md-4 offset-4 alert-warning" *ngIf='msg'>{{msg}}</h3>
+<div class="col-md-8 offset-2 card card-body mt-5 mb-5">
+    <form action="" [formGroup]="form" (ngSubmit)="addStudent(form)">
+        <h1 class="text-center bg-dark text-danger">Student Registration</h1>
+        <div class="col-md-6 float-left">
+        <div class="form-group">
+            <input type="text" name="sname" pattern="^[a-zA-Z+\\.?]{3,20}" formControlName="sname" id="sname" class="form-control" placeholder="Enter Student Name">
+            <div *ngIf="sname.touched && sname.invalid">
+                <p *ngIf="sname.errors.pattern" style="color: red;">* Please Enter Valid Name(Min 3 Character/No Digits)</p>
+                <p *ngIf="sname.errors.required" style="color: red;">* This Field Is Required</p>
+            </div>
+        </div>
+        <div class="form-group">
+            <input type="text" name="usn" formControlName="usn" pattern="[A-Za-z\d\.]{5,8}" id="usn" class="form-control" placeholder="Enter USN">
+            <div *ngIf="usn.touched && usn.invalid">
+                <p *ngIf="usn.errors.required" style="color: red;">* This Field Is Required</p>
+                <p *ngIf="usn.errors.pattern" style="color: red;">* Enter Valid USN</p>
+            </div>
+        </div>
+        <div class="form-group">
+            <input type="password" class="form-control" formControlName="password" name="password" id="password" placeholder="Enter Password">
+            <div *ngIf="password.touched && password.invalid">
+                <p *ngIf="password.errors.pattern" style="color: red;">* This Field Is Required</p>
+                <p *ngIf="password.errors.required" style="color: red;">* This Field Is Required</p>
+            </div>
+        </div>
+        <div class="form-group">
+            <input type="text" name="section" pattern="^[A-Za-z]{1,2}" id="section" class="form-control" formControlName="section" placeholder="enter section">
+            <div *ngIf="section.touched && section.invalid">
+                <p *ngIf="section.errors.required" style="color: red;">* This Field Is Required</p>
+                <p *ngIf="section.errors.pattern" style="color: red;">* Enter Valid </p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6 float-left">
+        <div class="form-group">
+            <input type="text" formControlName="branch" pattern="^[A-Za-z]{3,20}" name="branch" id="branch" class="form-control" placeholder="Enter Branch">
+            <div *ngIf="branch.touched && branch.invalid">
+                <p *ngIf="branch.errors.required" style="color: red;">* This Field Is Required</p>
+                <p *ngIf="branch.errors.pattern" style="color: red;">* Enter Valid Branch</p>
+            </div>
+        </div>
+        <div class="form-group">
+            <input type="text" formControlName="email" pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" name="email" id="email" class="form-control" placeholder="Enter Email">
+            <div *ngIf="email.touched && email.invalid">
+                <p *ngIf="email.errors.required" style="color: red;">* This Field Is Required</p>
+                <p *ngIf="email.errors.pattern" style="color: red;">* Enter Valid Branch</p>
+            </div>
+        </div>
+        <div class="form-group">
+            <input type="number" name="sem" id="sem" pattern="[\d]{1,1}" class="form-control" formControlName="sem" placeholder="enter sem">
+            <div *ngIf="sem.touched && sem.invalid">
+                <p *ngIf="sem.errors.required" style="color: red;">* This Field Is Required</p>
+                <p *ngIf="sem.errors.pattern" style="color: red;">* Enter Valid Semester</p>
+            </div>
+        </div>
+        <div class="form-group">
+            <input type="submit" value="Submit" [disabled]="form.invalid" class="btn btn-outline-success float-right">
+        </div>
+
+    </div>
+    </form>
+</div>

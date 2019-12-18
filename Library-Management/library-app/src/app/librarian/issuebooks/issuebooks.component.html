@@ -1,0 +1,50 @@
+<div class="col-md-4 offset-4" *ngIf="message">
+  <h1 class="text-center bg-dark text-success" *ngIf="message">{{message}}</h1>
+  </div>
+  <div class="mt-5 mb-5 col-md-4 offset-4 card card-body">
+    <input type="search" name="search" id="search" placeholder="Enter Book Name Search" [(ngModel)]="search" class="form-control">
+  </div>
+<table class="table book-class table-bordered table-striped table-dark mt-5 mb-5 col-md-8 offset-2">
+    <thead>
+      <tr>
+        <th scope="col">Books</th>
+        <th scope="col">Book Name</th>
+        <th scope="col">Author</th>
+        <th scope="col">Publication</th>
+        <th scope="col">Issue Book</th>
+        <th scope="col">Details</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let book of issueBooks| bookFilter:search; index as i">
+       <td>{{i+1}}</td>
+       <td>{{book.name}}</td>
+       <td>{{book.author}}</td>
+       <td>{{book.publication}}</td>
+       <td><button class="btn btn-success" (click)="issueBook(book)">Issue</button></td>
+       <td><button class="btn btn-success" data-toggle="modal" data-target="#exampleModal" (click)="studentDetail(book)">Student Details</button></td>
+      </tr>
+    </tbody>
+  </table>
+<!-- Modal -->
+<div class="modal fade" *ngIf="selectedStudent" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal-dialog" role="document">
+<div class="modal-content">
+  <div class="modal-header">
+    <h5 class="modal-title" id="exampleModalLabel">Student Details</h5>
+    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+   <h4>Student Name :{{selectedStudent.sname}}</h4>
+   <h4>USN : {{selectedStudent.usn}}</h4>
+   <h4>Branch : {{selectedStudent.branch}}</h4>
+   <h4>sem : {{selectedStudent.sem}}</h4>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+  </div>
+</div>
+</div>
+</div>

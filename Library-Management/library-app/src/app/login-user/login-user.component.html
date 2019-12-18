@@ -1,0 +1,22 @@
+<h3 *ngIf='error' class="col-md-4 offset-4 mt-5 mb-5 alert-warning">{{error}}</h3>
+<div class="login col-md-4 mt-5 mb-5 offset-4 card card-body">
+    <h3 class="text-center text-dark bg-danger"> User Login Form</h3>
+    <form action="" #form="ngForm" (ngSubmit)="loginData(form)">
+        <div class="form-group">
+            <input type="text" name="email" pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" id="email" #email="ngModel" ngModel class="form-control" placeholder="Enter Email" required>
+        <div *ngIf="email.touched && email.invalid">
+            <p class="text-danger" *ngIf="email.errors.required">This field required</p>
+            <p class="text-danger" *ngIf="email.errors.pattern">* Enter Valid Email</p>
+        </div>
+        </div>
+        <div class="form-group">
+                <input type="password" name="password" #password="ngModel" ngModel id="password" class="form-control" placeholder="enter password" required>
+         <div *ngIf="password.touched && password.invalid">
+            <p class="text-danger" *ngIf="password.errors.required">This field required</p>
+          </div>
+         </div>
+        <div class="form-group">
+            <button type="submit" class="btn btn-outline-success float-right" [disabled]="form.invalid">Login</button>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,23 @@
+<div class="mt-5 mb-5 col-md-4 offset-4 card card-body">
+  <input type="search" name="search" id="search" placeholder="Enter Book Name Search" [(ngModel)]="search" class="form-control">
+</div>
+<table class="table book-class table-bordered table-striped table-dark mt-5 mb-5 col-md-8 offset-2">
+    <thead>
+      <tr>
+        <th scope="col">Books</th>
+        <th scope="col">Book Name</th>
+        <th scope="col">Author</th>
+        <th scope="col">Publication</th>
+        <th scope="col">Issue Books</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let val of books| bookFilter:search;index as i">
+       <td>{{i+1}}</td>
+       <td>{{val.name}}</td>
+       <td>{{val.author}}</td>
+       <td>{{val.publication}}</td>
+       <td><button class="btn btn-success" (click)="issueBook(val)">Request</button></td>
+      </tr>
+    </tbody>
+  </table>
